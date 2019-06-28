@@ -7,7 +7,10 @@ import WithRestoService from '../hoc';
 import Background from './food-bg.jpg';
 
 const App = ({RestoService}) => {
-    console.log(RestoService.getMenuItems())
+    const allMenu = RestoService.getMenuItems();
+    // console.log(RestoService.getMenuItems())
+    allMenu.then((result) => console.log(result));
+
     return (
         <div style={{background: `url(${Background}) center center/cover no-repeat`}} className="app">
             <AppHeader total={50}/>
