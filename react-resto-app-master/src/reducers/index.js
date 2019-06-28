@@ -3,7 +3,7 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'MENU_LOADED': 
             return {
                 menu: action.payload

@@ -1,15 +1,17 @@
 export default class RestoService {
     constructor() {
-        this._db = 'http://localhost:3000/menu';    
+        this._db = 'http://localhost:3000';    
     }
-    getMenuItems = async () => {
-        //return [];
-        const result = await fetch(this._db);
-        //console.log(result)
+    async getResource(url) {
+        const result = await fetch(`${this._db}${url}`);
         if(!result.ok) {
             throw result.status;
         }
 
-        return result.json();
+        return await result.json();
+    }
+
+    async getMenuItems() {
+        return await this.getResource('/menu/')
     }
 }

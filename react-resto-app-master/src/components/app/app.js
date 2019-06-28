@@ -2,14 +2,13 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import {MainPage, CartPage} from '../pages';
 import AppHeader from '../app-header';
-import WithRestoService from '../hoc';
 
 import Background from './food-bg.jpg';
 
-const App = ({RestoService}) => {
-    const allMenu = RestoService.getMenuItems();
+const App = () => {
+    // const allMenu = RestoService.getMenuItems();
     // console.log(RestoService.getMenuItems())
-    allMenu.then((result) => console.log(result));
+    // allMenu.then((result) => console.log(result));
 
     return (
         <div style={{background: `url(${Background}) center center/cover no-repeat`}} className="app">
@@ -22,4 +21,4 @@ const App = ({RestoService}) => {
     )
 }
 
-export default WithRestoService()(App);
+export default App;
