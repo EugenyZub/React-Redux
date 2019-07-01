@@ -11,7 +11,7 @@ const menuRequested = () => {
     };
 };
 
-const menuError = () => {
+const menuError = (error) => {
     return {
         type: 'MENU_ERROR'
     };

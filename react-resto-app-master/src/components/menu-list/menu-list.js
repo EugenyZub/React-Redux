@@ -16,7 +16,7 @@ class MenuList extends Component {
         const {RestoService} = this.props;
         RestoService.getMenuItems()
             .then(res => this.props.menuLoaded(res))
-            .catch( )
+            .catch()
              //this.foo.born = 0;
     }
 

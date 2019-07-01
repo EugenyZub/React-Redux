@@ -14,6 +14,13 @@
         margin-bottom: 20px;
         text-align: center;
     }
+    &__icon {
+        margin-left: 10px;
+        position: absolute;
+        //padding-top: 3px;
+        height: 30px;
+        width: 30px;
+    }
     &__img {
         width: calc(100% + 40px);
         transform: translateX(-20px);
