@@ -27,7 +27,7 @@ class MenuList extends Component {
     }
 
     componentDidCatch() {
-        //this.props.menuError();
+        // this.props.menuError();
     }
 
     render() {
