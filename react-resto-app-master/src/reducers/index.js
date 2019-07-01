@@ -21,7 +21,7 @@ const reducer = (state = initialState, action) => {
         case 'MENU_ERROR': 
             return {
                 menu: state.menu,
-                loading: state.menu,
+                loading: false,
                 error: true
             }
             

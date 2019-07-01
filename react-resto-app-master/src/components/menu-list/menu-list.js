@@ -22,7 +22,7 @@ class MenuList extends Component {
         const {RestoService} = this.props;
         RestoService.getResource()
             .then(res => this.props.menuLoaded(res))
-            .catch( this.props.menuError())
+            .catch(() => this.props.menuError())
             //this.foo.born = 0;
     }
 
