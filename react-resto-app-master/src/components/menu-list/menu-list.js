@@ -10,24 +10,12 @@ import './menu-list.scss';
 
 class MenuList extends Component {
 
-    // onError = () => {
-        
-    //     this.props.menuError()
-    //     console.log(this.props.error)
-    // }
-
     componentDidMount() {
-        
         this.props.menuRequested();
         const {RestoService} = this.props;
         RestoService.getResource()
             .then(res => this.props.menuLoaded(res))
             .catch(() => this.props.menuError())
-            //this.foo.born = 0;
-    }
-
-    componentDidCatch() {
-        // this.props.menuError();
     }
 
     render() {
@@ -36,7 +24,7 @@ class MenuList extends Component {
         if (loading) {
             return <Spinner/>
         }
-        console.log(error)
+
         if (error) {
             return (
                     <ErrorBoundry>
@@ -46,7 +34,6 @@ class MenuList extends Component {
             )
         }
 
-        //const err = error && <ErrorBoundry/>;
         return (
             <ul className="menu__list">
                 {
