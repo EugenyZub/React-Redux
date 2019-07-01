@@ -6,10 +6,6 @@ import AppHeader from '../app-header';
 import Background from './food-bg.jpg';
 
 const App = () => {
-    // const allMenu = RestoService.getMenuItems();
-    // console.log(RestoService.getMenuItems())
-    // allMenu.then((result) => console.log(result));
-
     return (
         <div style={{background: `url(${Background}) center center/cover no-repeat`}} className="app">
             <AppHeader total={50}/>
