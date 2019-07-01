@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Error from '../error';
 
+import './error-boundary.scss';
 export default class ErrorBoundry extends Component {
 
     state = {
