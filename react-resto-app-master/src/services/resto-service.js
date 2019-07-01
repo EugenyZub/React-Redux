@@ -4,7 +4,7 @@ export default class RestoService {
     }
     async getResource() {
         const result = await fetch(this._db);
-        if(result.ok) {
+        if(!result.ok) {
             throw result.status;
         }
 

@@ -40,7 +40,7 @@ class MenuList extends Component {
         if (error) {
             return (
                     <ErrorBoundry>
-                        <div>Возникла непредвиденная ошибка!</div>
+                        <div className='whiteText'>Возникла непредвиденная ошибка!</div>
                         <img src='../../img/error.jpg' alt='error'></img>
                     </ErrorBoundry>
             )
