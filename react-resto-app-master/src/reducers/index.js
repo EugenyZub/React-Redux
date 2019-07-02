@@ -2,7 +2,8 @@ const initialState = {
     menu: [],
     loading: true,
     error: false,
-    items: []
+    items: [],
+    total: 0
 }
 
 const reducer = (state = initialState, action) => {
@@ -11,20 +12,17 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 menu: action.payload,
-                loading: false,
-                //error: false
+                loading: false
             }
         case 'MENU_REQUESTED': 
             return {
                 ...state,
-                //menu: state.menu,
                 loading: true,
                 error: false
             }
         case 'MENU_ERROR': 
             return {
                 ...state,
-                //menu: state.menu,
                 loading: false,
                 error: true
             }
@@ -37,9 +35,9 @@ const reducer = (state = initialState, action) => {
                 url: item.url,
                 id: item.id
             };
-
             return {
                 ...state,
+                total: state.total + item.price,
                 items: [
                     ...state.items,
                     newItem
