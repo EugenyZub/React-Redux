@@ -45,13 +45,15 @@ const reducer = (state = initialState, action) => {
             };
         case 'ITEM_REMOVE_FROM_CARD': 
             const index = action.payload;
-            const itemIndex = state.items.findIndex(item => item.id === index);
+            //const itemIndex = state.items.findIndex(item => item.id === index);
+            const aaa = state.items.filter(item => item.id !== index);
             return {
                 ...state,
                 total: state.total - action.removingPrice,
                 items: [
-                    ...state.items.slice(0, itemIndex),
-                    ...state.items.slice(itemIndex + 1)
+                    ...aaa
+                    // ...state.items.slice(0, itemIndex),
+                    // ...state.items.slice(itemIndex + 1)
                 ]
             }
 

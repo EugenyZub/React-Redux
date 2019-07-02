@@ -19,7 +19,7 @@ const CartTable = ({items, deleteFromCard, repeatCounters}) => {
                                 <div className="cart__item-price">
                                     {price}$ * {repeatCounters[i]} = {price * repeatCounters[i]}$
                                 </div>
-                                <div onClick={() => deleteFromCard(id, price)} 
+                                <div onClick={() => deleteFromCard(id, price * repeatCounters[i])} 
                                      className="cart__close">&times;</div>
                             </div>
                         )
