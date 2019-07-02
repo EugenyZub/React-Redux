@@ -11,6 +11,7 @@ const CartTable = ({items, deleteFromCard, repeatCounters}) => {
                 {
                     items.map( (item,i) => {
                         const {title, price, url, id} = item;
+                        //const allItemPrice = price * repeatCounters[i];
                         return (
                             <div key={id} className="cart__item">
                                 <img  src={url} className="cart__item-img" alt={title}></img>
@@ -18,7 +19,7 @@ const CartTable = ({items, deleteFromCard, repeatCounters}) => {
                                 <div className="cart__item-price">
                                     {price}$ * {repeatCounters[i]} = {price * repeatCounters[i]}$
                                 </div>
-                                <div onClick={() => deleteFromCard(id)} 
+                                <div onClick={() => deleteFromCard(id, price)} 
                                      className="cart__close">&times;</div>
                             </div>
                         )

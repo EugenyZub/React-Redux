@@ -24,10 +24,11 @@ const addedToCard = (id) => {
     };
 };
 
-const deleteFromCard = (id) => {
+const deleteFromCard = (id, removingPrice) => {
     return {
         type: 'ITEM_REMOVE_FROM_CARD',
-        payload: id
+        payload: id,
+        removingPrice: removingPrice
     };
 };
 

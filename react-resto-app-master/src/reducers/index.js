@@ -48,6 +48,7 @@ const reducer = (state = initialState, action) => {
             const itemIndex = state.items.findIndex(item => item.id === index);
             return {
                 ...state,
+                total: state.total - action.removingPrice,
                 items: [
                     ...state.items.slice(0, itemIndex),
                     ...state.items.slice(itemIndex + 1)
